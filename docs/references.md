@@ -1,4 +1,4 @@
-# 10 — References (keep handy)
+# References (keep handy)
 
 **GitHub Copilot**
 - Org metrics: `GET /orgs/{org}/copilot/metrics`

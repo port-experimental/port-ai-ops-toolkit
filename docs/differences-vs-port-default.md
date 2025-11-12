@@ -1,4 +1,4 @@
-# 08 — Differences vs Port’s Existing GitHub Copilot Integration
+# Differences vs Port’s existing GitHub Copilot integration
 
 | Area | Port default behavior | This package |
 |---|---|---|

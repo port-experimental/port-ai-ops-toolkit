@@ -1,4 +1,4 @@
-# 07 — Dashboard (AI Consumption)
+# Dashboard (AI consumption)
 
 Create a **Dashboard** page in Port and add these widgets. Filter by last 30 days where applicable.
 

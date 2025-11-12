@@ -1,4 +1,4 @@
-# 04 — Tokens & Permissions (Exact Requirements)
+# Tokens & Permissions (exact requirements)
 
 ## Port
 - Create **Client ID / Secret** in Port → Settings → Credentials.

@@ -1,4 +1,4 @@
-# 09 — Validation & Guardrails
+# Validation & guardrails
 
 ## Functional checks
 - **Entities present:** after first run, you should see:
