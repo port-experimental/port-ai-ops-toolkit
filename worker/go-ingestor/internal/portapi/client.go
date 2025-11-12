@@ -11,7 +11,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/udaykorlimarla/copilotusageingestor/internal/httpx"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
 )
 
 // Client handles direct Port entity upserts when webhooks aren't used.

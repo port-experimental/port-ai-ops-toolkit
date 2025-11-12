@@ -12,7 +12,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/udaykorlimarla/copilotusageingestor/internal/httpx"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
 )
 
 func periodToken(days int) string {

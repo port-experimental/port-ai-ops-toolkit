@@ -12,10 +12,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/udaykorlimarla/copilotusageingestor/internal/config"
-	"github.com/udaykorlimarla/copilotusageingestor/internal/httpx"
-	"github.com/udaykorlimarla/copilotusageingestor/internal/ingest"
-	"github.com/udaykorlimarla/copilotusageingestor/internal/portapi"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/config"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/ingest"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/portapi"
 )
 
 func main() {

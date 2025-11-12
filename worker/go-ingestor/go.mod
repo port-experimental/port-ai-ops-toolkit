@@ -1,3 +1,3 @@
-module github.com/udaykorlimarla/copilotusageingestor
+module github.com/port-experimental/copilot-usage-ingestor
 
 go 1.22

@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/udaykorlimarla/copilotusageingestor/internal/httpx"
+	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
 )
 
 // Token performs client-credentials OAuth2 against Entra ID for Graph.
