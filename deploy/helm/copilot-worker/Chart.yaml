@@ -1,0 +1,12 @@
+apiVersion: v2
+name: copilot-worker
+description: >
+  Kubernetes CronJob that runs the Copilot worker (GitHub + Microsoft 365 AI usage)
+  and can be duplicated for future AI ingestion workers.
+type: application
+version: 0.1.0
+appVersion: latest
+home: https://github.com/port-labs/port-ai-ops-toolkit
+maintainers:
+  - name: Port
+    url: https://app.getport.io

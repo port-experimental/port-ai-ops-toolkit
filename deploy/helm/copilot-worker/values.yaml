@@ -1,0 +1,91 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: ghcr.io/port-experimental/copilot-worker
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+args: []
+
+envFrom: []
+
+env:
+  PORT_REGION: eu
+  USE_PORT_WEBHOOK: "true"
+  INGEST_GITHUB: "true"
+  INGEST_M365: "true"
+  GITHUB_ORG: your-org
+  GITHUB_API_BASE: https://api.github.com
+  GITHUB_API_VERSION: "2022-11-28"
+  MS_TENANT_ID: your-tenant-id-guid
+  GRAPH_API_BASE: https://graph.microsoft.com
+  M365_COPILOT_SKUS: MICROSOFT_365_COPILOT
+  PERIOD_DAYS: "30"
+  SEATS_ACTIVE_WINDOW_DAYS: "14"
+
+secret:
+  create: true
+  nameOverride: ""
+  annotations: {}
+  data:
+    PORT_CLIENT_ID: ""
+    PORT_CLIENT_SECRET: ""
+    PORT_ACCESS_TOKEN: ""
+    PORT_WEBHOOK_SECRET: ""
+    PORT_WEBHOOK_SEATS_URL: ""
+    PORT_WEBHOOK_M365_SUMMARY_URL: ""
+    PORT_WEBHOOK_M365_USERS_URL: ""
+    GITHUB_TOKEN: ""
+    MS_CLIENT_ID: ""
+    MS_CLIENT_SECRET: ""
+
+serviceAccount:
+  create: false
+  name: ""
+  automount: true
+  annotations: {}
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext:
+  runAsNonRoot: true
+  seccompProfile:
+    type: RuntimeDefault
+
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+nodeSelector: {}
+affinity: {}
+tolerations: []
+
+cronJob:
+  schedule: "0 2 * * *"
+  timeZone: ""
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: null
+  suspend: false
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 3
+  ttlSecondsAfterFinished: null
+  backoffLimit: 1
+  activeDeadlineSeconds: null
+  restartPolicy: OnFailure
+  annotations: {}
+  jobAnnotations: {}

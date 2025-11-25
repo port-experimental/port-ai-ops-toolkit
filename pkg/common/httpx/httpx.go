@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-const DefaultUserAgent = "copilot-usage-ingestor/0.1"
+const DefaultUserAgent = "copilot-worker/0.1"
 
 func init() {
 	rand.Seed(time.Now().UnixNano())

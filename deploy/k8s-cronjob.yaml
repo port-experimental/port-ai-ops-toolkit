@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: copilot-usage-ingestor
+  name: copilot-worker
 spec:
   # 02:00 UTC daily
   schedule: "0 2 * * *"
@@ -14,7 +14,7 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: worker
-              image: ghcr.io/port-experimental/copilot-usage-ingestor:latest
+              image: ghcr.io/port-experimental/copilot-worker:latest
               envFrom:
                 - secretRef: { name: ai-usage-secrets }
               resources:

@@ -3,8 +3,8 @@
 // - Safe by default: timeouts, retries with backoff, and no secret logging.
 // - PII: hashes UPN if de-identified reports hide user names.
 //
-// Build: go build -o ingest ./...
-// Env: see config.example.env
+// Build: go build -o copilot-worker ./...
+// Env: see copilot.config.example.env
 package main
 
 import (
@@ -12,15 +12,15 @@ import (
 	"log"
 	"time"
 
-	"github.com/port-experimental/copilot-usage-ingestor/internal/config"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/ingest"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/portapi"
+	"github.com/port-labs/port-ai-ops-toolkit/pkg/common/httpx"
+	"github.com/port-labs/port-ai-ops-toolkit/pkg/common/portapi"
+	"github.com/port-labs/port-ai-ops-toolkit/workers/copilot-worker/internal/config"
+	"github.com/port-labs/port-ai-ops-toolkit/workers/copilot-worker/internal/ingest"
 )
 
 func main() {
 	log.SetFlags(log.LstdFlags | log.LUTC | log.Lmsgprefix)
-	log.SetPrefix("[ingest] ")
+	log.SetPrefix("[copilot-worker] ")
 	cfg := config.Load()
 
 	// Fast sanity: require either Webhook URLs (UseWebhook=true) OR Port credentials.
