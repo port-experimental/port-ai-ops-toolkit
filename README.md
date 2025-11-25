@@ -22,7 +22,7 @@ This repository bundles everything needed to ingest GitHub Copilot seats + usage
 ## Quick start
 1. Apply the JSON in `configs/blueprints/`, then wire up Port data sources with the files in `configs/mappings/`.
 2. Copy `worker/go-ingestor/config.example.env` to `.env`, populate secrets (GitHub PAT, Graph app credentials, Port tokens, webhook URLs), toggle `INGEST_GITHUB` / `INGEST_M365` as needed, and run `go build -o ingest ./worker/go-ingestor/...`.
-3. Choose a deployment target from `deploy/` and plug in the same environment variables for scheduled runs.
+3. Choose a deployment target from `deploy/` and plug in the same environment variables for scheduled runs. A Kubernetes-native Helm chart now lives under `deploy/helm/copilot-usage-ingestor` for automated CronJob installs.
 4. Finish with the widgets in `docs/dashboard.md` and the validation checklist in `docs/validation-and-guardrails.md`.
 
 Everything under `docs/` can be read independently, but the sequence page keeps you in the right order.

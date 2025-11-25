@@ -1,0 +1,12 @@
+apiVersion: v2
+name: copilot-usage-ingestor
+description: >
+  Kubernetes CronJob that runs the AI Copilot ingestion worker for GitHub Copilot
+  and Microsoft 365 Copilot usage.
+type: application
+version: 0.1.0
+appVersion: latest
+home: https://github.com/port-labs/copilot-usage-ingestor
+maintainers:
+  - name: Port
+    url: https://app.getport.io
