@@ -2,7 +2,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: ghcr.io/port-experimental/copilot-usage-ingestor
+  repository: ghcr.io/port-experimental/copilot-worker
   tag: latest
   pullPolicy: IfNotPresent
 

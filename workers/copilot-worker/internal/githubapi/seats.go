@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
+	"github.com/port-labs/port-ai-ops-toolkit/pkg/common/httpx"
 )
 
 // Seat is the subset of the Copilot seats response we care about.

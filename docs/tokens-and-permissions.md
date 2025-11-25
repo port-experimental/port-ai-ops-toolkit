@@ -21,5 +21,5 @@
 - Token flow: **client credentials** to `https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token` with scope `https://graph.microsoft.com/.default`.
 
 ## Secrets Handling
-- Store all secrets as environment variables (see `worker/go-ingestor/config.example.env`).
+- Store all secrets as environment variables (see `workers/copilot-worker/copilot.config.example.env`).
 - Don’t log tokens. Rotate quarterly or per policy; revoke on role changes.

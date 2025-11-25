@@ -5,11 +5,11 @@ import (
 	"log"
 	"time"
 
-	"github.com/port-experimental/copilot-usage-ingestor/internal/config"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/githubapi"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/graphapi"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/httpx"
-	"github.com/port-experimental/copilot-usage-ingestor/internal/portapi"
+	"github.com/port-labs/port-ai-ops-toolkit/pkg/common/httpx"
+	"github.com/port-labs/port-ai-ops-toolkit/pkg/common/portapi"
+	"github.com/port-labs/port-ai-ops-toolkit/workers/copilot-worker/internal/config"
+	"github.com/port-labs/port-ai-ops-toolkit/workers/copilot-worker/internal/githubapi"
+	"github.com/port-labs/port-ai-ops-toolkit/workers/copilot-worker/internal/graphapi"
 )
 
 // GitHubSeats ingests GitHub Copilot seat snapshots via webhook or Port API.
